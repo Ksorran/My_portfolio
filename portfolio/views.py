@@ -1,4 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from django.views.generic import TemplateView
+from users.models import User
 
-def index(request):
-    return HttpResponse('Главная страница!')
+
+
+class IndexView(TemplateView):
+    template_name = 'portfolio/index.html'
