@@ -1,11 +1,39 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-
-</head>
-<body>
-<h1> ТЕСТ! </h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div class="slogan">
+            <h2 class="slogan-1">Из ФНС в Backend!</h2>
+            <h3 class="slogan-2">Уж если менять сферу, то кардинально!</h3>
+        </div>
+        <div class="fork">
+            <div class="text-offer">
+                <h2>Вашему вниманию предлагается:</h2>
+            </div>
+            <div class="offers">
+                <div class="offer">
+                    <img src="{% static 'portfolio/images/port.jpeg' %}" alt="Папка для документов"
+                         width="100%" class="offer-image">
+                    <div class="offer-body">
+                        <h3 class="offer_title">Каталог Pet-проектов</h3>
+                        <a href="{% url 'projects' %}" class="offer-link">Перейти</a>
+                    </div>
+                </div>
+                <div class="offer">
+                    <img src="{% static 'portfolio/images/resume.jpg' %}" alt="Резюме"
+                         width="100%" class="offer-image">
+                    <div class="offer-body">
+                        <h3 class="offer_title">Резюме</h3>
+                        <a href="#" class="offer-link">Открыть</a>
+                    </div>
+                </div>
+                <div class="offer">
+                    <img src="{% static 'portfolio/images/www.png' %}" alt="Сайт"
+                         width="100%" class="offer-image">
+                    <div class="offer-body">
+                        <h3 class="offer_title">О сайте подробно</h3>
+                        <a href="#" class="offer-link">Открыть</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

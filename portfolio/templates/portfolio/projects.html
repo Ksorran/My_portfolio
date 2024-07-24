@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load portfolio_tags %}
+
+{% block content %}
+    <div class="projects_home">
+        <div class="side-bar">
+            <ul class="categories">
+                {% if cat_selected == 0 %}
+                <li class="selected"><h3>Все категории:</h3></li>
+                {% else %}
+                <li><a href="{% url 'projects' %}"><h3>Все категории:</h3></a></li>
+                {% endif %}
+
+                {% show_categories cat_selected %}
+
+            </ul>
+        </div>
+        <div class="projects-list">
+            <ul class="list-projects">
+                {% for p in projects %}
+                    <li class="project">
+                        <h2 class="pr-title">{{ p.title }}</h2>
+                        <p class="pr-cat">Категория: {{ p.cat.name }} | Теги: (пока в планах) | Дата последнего изменения:
+                            {{ p.time_update }}</p>
+                        <div class="project-body">
+                            {% if p.title_screen %}
+                                <img src="{{ p.title_screen.url }}" alt="Лого проекта" class="p_title_scr">
+                            {% endif %}
+                            {% autoescape off %}
+                                {{p.description|linebreaks|truncatewords:40}}
+                            {% endautoescape %}
+                        </div>
+                        <p class="pr-link"><a href="{{ p.get_absolute_url }}">Подробнее</a></p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

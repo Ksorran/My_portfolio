@@ -1,0 +1,26 @@
+#header, .module caption {
+    color: white;
+    background: black;
+}
+
+div.breadcrumbs {
+    background: black;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: black;
+}
+
+#content h1 {
+    color: black;
+    font-weight: bold;
+}
+
+#site-name a:link, #site-name a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+tbody a:link, tbody a:visited {
+    color: black;
+}
