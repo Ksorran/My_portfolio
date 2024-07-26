@@ -23,7 +23,19 @@
                 <li class="menu_link"><a href="#" class="mlink">О сайте</a></li>
             </ul>
         </div>
-        <div class="register_menu"><a href="#" class="mlink">Регистрация</a> | <a href="#" class="mlink">Вход</a></div>
+
+        <div class="register_menu">
+            {% if user.is_authenticated %}
+				<form method="post" action="{% url 'users:logout' %}">
+    				{% csrf_token %}
+                    <a href="#" class="mlink">{{user.username}} |</a>
+                    <button type="submit">Выйти</button>
+                </form>
+			{% else %}
+				<a href="{% url 'users:login' %}" class="mlink">Войти</a> | <a href="#" class="mlink">Регистрация</a> </li>
+			{% endif %}
+        </div>
+        <!--- <div class="register_menu"><a href="#" class="mlink">Регистрация</a> | <a href="{% url 'users:login' %}" class="mlink">Вход</a></div> --->
     </header>
 
     <main class="main_main">

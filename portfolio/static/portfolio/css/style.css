@@ -71,7 +71,7 @@ body {
     /*! background: url("../images/footer.png");*/
     box-sizing: border-box;
     background-color: black;
-    padding: 60px 0px;
+    padding: 30px 0px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -253,4 +253,29 @@ body {
     padding: 10px 40px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+
+/* ______________________________________________Форма регистрации___________________________________________________ */
+#login-form {
+    padding-top: 2%;
+    padding-left: 30%;
+}
+
+.form-input {
+    width: 300px;
+    font-size: 16px;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #CC0000;
 }
