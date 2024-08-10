@@ -14,28 +14,30 @@
     <header class="main_header">
         <div class="logo">
             <img src="{% static 'portfolio/images/papka.png' %}" width="70px">
-            <h1 class="text_logo">Портфолио</h1>
+            <h1 class="text_logo">{{ title }}</h1>
         </div>
         <div class="main_menu">
             <ul class="top_menu">
                 <li class="menu_link"><a href="{% url 'home' %}" class="mlink">Главная</a></li>
-                <li class="menu_link"><a href="#" class="mlink">Контакты</a></li>
+                <li class="menu_link"><a href="{% url 'contact' %}" class="mlink">Обратная связь</a></li>
                 <li class="menu_link"><a href="#" class="mlink">О сайте</a></li>
             </ul>
         </div>
 
-        <div class="register_menu">
-            {% if user.is_authenticated %}
-				<form method="post" action="{% url 'users:logout' %}">
-    				{% csrf_token %}
-                    <a href="#" class="mlink">{{user.username}} |</a>
-                    <button type="submit">Выйти</button>
-                </form>
-			{% else %}
-				<a href="{% url 'users:login' %}" class="mlink">Войти</a> | <a href="#" class="mlink">Регистрация</a> </li>
-			{% endif %}
+        <div class="reg_men">
+            <div class="register_menu">
+                {% if user.is_authenticated %}
+                    <form method="post" action="{% url 'users:logout' %}">
+                        {% csrf_token %}
+                        <a href="{% url 'users:profile' %}" class="mlink">{{user.username}} |</a>
+                        <button type="submit" class="logout-button">Выйти</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'users:login' %}" class="mlink">Войти</a> | <a href="{% url 'users:register' %}"
+                                                                                   class="mlink">Регистрация</a> </li>
+                {% endif %}
+            </div>
         </div>
-        <!--- <div class="register_menu"><a href="#" class="mlink">Регистрация</a> | <a href="{% url 'users:login' %}" class="mlink">Вход</a></div> --->
     </header>
 
     <main class="main_main">
@@ -44,9 +46,18 @@
     </main>
 
     <footer class="main_footer">
-        <div class="social-networks">
-            <a href="https://github.com/Ksorran/My_portfolio"><img src="{% static 'portfolio/images/github_b.png'%}" alt="Логотип github" class="footer-1" width="5%"></a>
-            <a href="https://t.me/Evgeniy_Glushko"><img src="{% static 'portfolio/images/telegram.png' %}" alt="Логотип telegram" class="footer-2" width="5%"></a>
+        <div class="contacts">
+            <div class="contacts-text"><h4>Контакты: </h4></div>
+            <div class="contacts-blocks">
+                <div class="social-networks">
+                    <a href="https://github.com/Ksorran/My_portfolio"><img src="{% static 'portfolio/images/github_b.png'%}"
+                                                                           alt="Логотип github" class="footer-1" width="12%"></a>
+                    <a href="https://t.me/Evgeniy_Glushko"><img src="{% static 'portfolio/images/telegram.png' %}"
+                                                                alt="Логотип telegram" class="footer-2" width="12%"></a>
+                </div>
+                <div class="telephone"><img src="{% static 'portfolio/images/white-telephone.png' %}" alt="Изображение телефона"
+                                            class="telephone-logo"><span class="telephone-number">+7 965 083-15-34</span> </div>
+            </div>
         </div>
         <div class="copyrights">©Права не защищены, так как я пока не знаю как их защищать.</div>
     </footer>

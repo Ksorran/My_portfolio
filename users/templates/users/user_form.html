@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <form method="post" class="login-form">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}"/>
+        {% if title == "Вход" %}
+            <p><a href="{% url 'social:begin' 'github' %}"><img src="/media/social-auth/gitgub_auth.png" width="7%"></a></p>
+        {% endif %}
+        <div class="form-error">{{ form.non_field_errors }}</div>
+        {% for f in form %}
+            <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+        <p><button type="submit" class="lg-button">{{ button }}</button></p>
+        {% if title == "Вход" %}
+            {% include 'users/for_include/reset_pass_button.html' %}
+        {% endif %}
+    </form>
+{% endblock %}

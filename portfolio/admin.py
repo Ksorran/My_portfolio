@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Projects, Category
+from .models import Projects, Category, Feedback
 
 
 @admin.register(Projects)
@@ -17,3 +17,9 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'name')
     ordering = ('id', )
 
+
+@admin.register(Feedback)
+class FeedbackAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'email', 'telephone', 'content')
+    list_display_links = ('id', 'name')
+    ordering = ('id', )

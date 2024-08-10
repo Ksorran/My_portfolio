@@ -48,3 +48,14 @@ class Category(models.Model):
     def get_absolute_url(self):
         return reverse('category', kwargs={'cat_slug': self.slug})
 
+
+class Feedback(models.Model):
+    name = models.CharField(max_length=255, verbose_name="Имя")
+    email = models.EmailField(verbose_name='Email')
+    telephone = models.CharField(max_length=255, verbose_name='Телефон')
+    content = models.TextField(verbose_name="Сообщение")
+
+    class Meta:
+        verbose_name = 'Обратная связь'
+        verbose_name_plural = 'Обратная связь'
+

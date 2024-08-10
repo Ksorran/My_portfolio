@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <form method="post" id="profile-form" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if user.photo %}
+        <div class="user-photo"><img class="user-photo" src="{{ user.photo.url }}"></div>
+        {% else %}
+        <div class="user-photo"><img class="user-photo" src="{{ default_image }}"></div>
+        {% endif %}
+        <div class="form-error">{{ form.non_field_errors }}</div>
+        {% for f in form %}
+            <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+        <p><button type="submit" class="lg-button">{{ button }}</button></p>
+        {% if not perms.users.social_auth %}
+            <hr>
+            <p><a href="{% url 'users:password_change' %}" class="change-pass-button">Сменить пароль</a></p>
+        {% endif %}
+    </form>
+{% endblock %}
