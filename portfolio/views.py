@@ -48,7 +48,7 @@ class ShowProject(DetailView):
         return get_object_or_404(Projects.objects, slug=self.kwargs[self.slug_url_kwarg])
 
 
-class ContactView(LoginRequiredMixin, CreateView):
+class ContactView(CreateView):
     form_class = FeedbackForm
     template_name = 'portfolio/contact.html'
     success_url = reverse_lazy('home')

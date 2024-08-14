@@ -36,6 +36,7 @@ body {
     flex-grow: 1;
 }
 
+/* центральное меню */
 .main_menu {
     display: flex;
 }
@@ -45,26 +46,48 @@ body {
     grid-template-columns: 0.8fr 1.4fr 0.8fr;
     margin: auto;
     white-space: nowrap;
+    padding: 0;
 }
 
 .menu_link {
     list-style: none;
     margin-right: 15px;
+    transform: scale(1);
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: linear;
 }
 
-.mlink {
-    color: black;
-    text-decoration: none;
-    font-weight: lighter;
-    text-transform: uppercase;
-}
-
+/* меню регистрации */
 .reg_men {
     display: flex;
+    margin: auto 0 auto auto;
 }
 
 .register_menu {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+    white-space: nowrap;
+    padding: 0;
     margin: auto 0 auto auto;
+}
+
+.login-link {
+    list-style: none;
+    transform: scale(1);
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+.lp {
+    text-align: right;
+}
+.cp {
+    text-align: center;
+}
+.rp {
+    text-align: left;
 }
 
 .logout-button {
@@ -72,6 +95,22 @@ body {
     padding:0;
     border:none;
     background-color: inherit;
+    text-transform: uppercase;
+}
+
+/* Общее для центрального меню и меню регистрации */
+.menu_link:hover, .login-link:hover {
+    transform: scale(1.1)
+}
+
+.mlink:hover, .logout-button:hover {
+    text-shadow: 1px 1px #DCDCDC;
+}
+
+.mlink {
+    color: black;
+    text-decoration: none;
+    font-weight: lighter;
     text-transform: uppercase;
 }
 

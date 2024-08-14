@@ -5,9 +5,10 @@
     <form method="post" id="profile-form" enctype="multipart/form-data">
         {% csrf_token %}
         {% if user.photo %}
-        <div class="user-photo"><img class="user-photo" src="{{ user.photo.url }}"></div>
+        <div class="user-photo"><img class="user-photo" src="{{ user.photo.url }}" alt="Фото пользователя"></div>
         {% else %}
-        <div class="user-photo"><img class="user-photo" src="{{ default_image }}"></div>
+        <div class="user-photo"><img class="user-photo" src="{{ default_image }}"
+                                     alt="Фото пользователя по умолчанию"></div>
         {% endif %}
         <div class="form-error">{{ form.non_field_errors }}</div>
         {% for f in form %}
