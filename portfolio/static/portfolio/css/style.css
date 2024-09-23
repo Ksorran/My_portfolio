@@ -231,6 +231,7 @@ body {
 
 .offer-body {
     display: inline-block;
+    transition-duration: 0.5s;
 }
 
 .offer_title {
@@ -249,11 +250,13 @@ body {
 
 .offer-link a:hover {
     color: red;
-    box-shadow: 0.2em 0.1em 0.1em darkred;
+    box-shadow: 5px 5px 5px red;
+    /*color: red;*/
+    /*box-shadow: 0.2em 0.1em 0.1em darkred;*/
 }
 
 .offer-link:hover {
-    transform: translate(-0.5em, -0.5em);
+    transform: translate(-0.2em, -0.2em);
 
 }
 
