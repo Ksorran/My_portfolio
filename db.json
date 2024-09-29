@@ -245,7 +245,7 @@
   "model": "auth.permission",
   "pk": 25,
   "fields": {
-    "name": "Can add Категории",
+    "name": "Can add РљР°С‚РµРіРѕСЂРёРё",
     "content_type": 7,
     "codename": "add_category"
   }
@@ -254,7 +254,7 @@
   "model": "auth.permission",
   "pk": 26,
   "fields": {
-    "name": "Can change Категории",
+    "name": "Can change РљР°С‚РµРіРѕСЂРёРё",
     "content_type": 7,
     "codename": "change_category"
   }
@@ -263,7 +263,7 @@
   "model": "auth.permission",
   "pk": 27,
   "fields": {
-    "name": "Can delete Категории",
+    "name": "Can delete РљР°С‚РµРіРѕСЂРёРё",
     "content_type": 7,
     "codename": "delete_category"
   }
@@ -272,7 +272,7 @@
   "model": "auth.permission",
   "pk": 28,
   "fields": {
-    "name": "Can view Категории",
+    "name": "Can view РљР°С‚РµРіРѕСЂРёРё",
     "content_type": 7,
     "codename": "view_category"
   }
@@ -281,7 +281,7 @@
   "model": "auth.permission",
   "pk": 29,
   "fields": {
-    "name": "Can add Обратная связь",
+    "name": "Can add РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ",
     "content_type": 8,
     "codename": "add_feedback"
   }
@@ -290,7 +290,7 @@
   "model": "auth.permission",
   "pk": 30,
   "fields": {
-    "name": "Can change Обратная связь",
+    "name": "Can change РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ",
     "content_type": 8,
     "codename": "change_feedback"
   }
@@ -299,7 +299,7 @@
   "model": "auth.permission",
   "pk": 31,
   "fields": {
-    "name": "Can delete Обратная связь",
+    "name": "Can delete РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ",
     "content_type": 8,
     "codename": "delete_feedback"
   }
@@ -308,7 +308,7 @@
   "model": "auth.permission",
   "pk": 32,
   "fields": {
-    "name": "Can view Обратная связь",
+    "name": "Can view РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ",
     "content_type": 8,
     "codename": "view_feedback"
   }
@@ -317,7 +317,7 @@
   "model": "auth.permission",
   "pk": 33,
   "fields": {
-    "name": "Can add Проекты",
+    "name": "Can add РџСЂРѕРµРєС‚С‹",
     "content_type": 9,
     "codename": "add_projects"
   }
@@ -326,7 +326,7 @@
   "model": "auth.permission",
   "pk": 34,
   "fields": {
-    "name": "Can change Проекты",
+    "name": "Can change РџСЂРѕРµРєС‚С‹",
     "content_type": 9,
     "codename": "change_projects"
   }
@@ -335,7 +335,7 @@
   "model": "auth.permission",
   "pk": 35,
   "fields": {
-    "name": "Can delete Проекты",
+    "name": "Can delete РџСЂРѕРµРєС‚С‹",
     "content_type": 9,
     "codename": "delete_projects"
   }
@@ -344,7 +344,7 @@
   "model": "auth.permission",
   "pk": 36,
   "fields": {
-    "name": "Can view Проекты",
+    "name": "Can view РџСЂРѕРµРєС‚С‹",
     "content_type": 9,
     "codename": "view_projects"
   }
@@ -569,10 +569,10 @@
   "model": "portfolio.projects",
   "pk": 1,
   "fields": {
-    "title": "Парсер магазинов электроники",
+    "title": "РџР°СЂСЃРµСЂ РјР°РіР°Р·РёРЅРѕРІ СЌР»РµРєС‚СЂРѕРЅРёРєРё",
     "slug": "pars_el_mag",
     "title_screen": "screenshots/xweb-scraping-750x400.jpg.pagespeed.ic.rNdNMccoAB.webp",
-    "description": "Парсер для поиска товаров в ведущих магазинах электроники и для последующего сравнения цен.",
+    "description": "РџР°СЂСЃРµСЂ РґР»СЏ РїРѕРёСЃРєР° С‚РѕРІР°СЂРѕРІ РІ РІРµРґСѓС‰РёС… РјР°РіР°Р·РёРЅР°С… СЌР»РµРєС‚СЂРѕРЅРёРєРё Рё РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµРіРѕ СЃСЂР°РІРЅРµРЅРёСЏ С†РµРЅ.",
     "code_screen": "",
     "interface_screen": "",
     "github_link": null,
@@ -585,10 +585,10 @@
   "model": "portfolio.projects",
   "pk": 2,
   "fields": {
-    "title": "Телеграмм бот с Chat-GPT",
+    "title": "РўРµР»РµРіСЂР°РјРј Р±РѕС‚ СЃ Chat-GPT",
     "slug": "bot_gpt",
     "title_screen": "screenshots/default_pr.png",
-    "description": "Чат-бот для телеграмма с возможностью обращения к Chat-GPT",
+    "description": "Р§Р°С‚-Р±РѕС‚ РґР»СЏ С‚РµР»РµРіСЂР°РјРјР° СЃ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊСЋ РѕР±СЂР°С‰РµРЅРёСЏ Рє Chat-GPT",
     "code_screen": "",
     "interface_screen": "",
     "github_link": null,
@@ -601,10 +601,10 @@
   "model": "portfolio.projects",
   "pk": 3,
   "fields": {
-    "title": "Конвертер валют",
+    "title": "РљРѕРЅРІРµСЂС‚РµСЂ РІР°Р»СЋС‚",
     "slug": "conv_val",
     "title_screen": "screenshots/default_pr_DDBbqhm.png",
-    "description": "Простой конвертер валют на Django",
+    "description": "РџСЂРѕСЃС‚РѕР№ РєРѕРЅРІРµСЂС‚РµСЂ РІР°Р»СЋС‚ РЅР° Django",
     "code_screen": "",
     "interface_screen": "",
     "github_link": null,
@@ -617,10 +617,10 @@
   "model": "portfolio.projects",
   "pk": 4,
   "fields": {
-    "title": "Бот для ответа на комментарии",
+    "title": "Р‘РѕС‚ РґР»СЏ РѕС‚РІРµС‚Р° РЅР° РєРѕРјРјРµРЅС‚Р°СЂРёРё",
     "slug": "bot_komm",
     "title_screen": "screenshots/default_pr_KYF9nLZ.png",
-    "description": "Бессмысленное в сущности задание, созданное исключительно потому, что мне потребовался четвертый проект для отладки сайта",
+    "description": "Р‘РµСЃСЃРјС‹СЃР»РµРЅРЅРѕРµ РІ СЃСѓС‰РЅРѕСЃС‚Рё Р·Р°РґР°РЅРёРµ, СЃРѕР·РґР°РЅРЅРѕРµ РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅРѕ РїРѕС‚РѕРјСѓ, С‡С‚Рѕ РјРЅРµ РїРѕС‚СЂРµР±РѕРІР°Р»СЃСЏ С‡РµС‚РІРµСЂС‚С‹Р№ РїСЂРѕРµРєС‚ РґР»СЏ РѕС‚Р»Р°РґРєРё СЃР°Р№С‚Р°",
     "code_screen": "",
     "interface_screen": "",
     "github_link": null,
@@ -636,7 +636,7 @@
     "title": "Todoo-List",
     "slug": "todool",
     "title_screen": "def_im/default_pr.png",
-    "description": "Простое приложение на django для записи заметок и планирования предстоящих задач.",
+    "description": "РџСЂРѕСЃС‚РѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ РЅР° django РґР»СЏ Р·Р°РїРёСЃРё Р·Р°РјРµС‚РѕРє Рё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ РїСЂРµРґСЃС‚РѕСЏС‰РёС… Р·Р°РґР°С‡.",
     "code_screen": "",
     "interface_screen": "",
     "github_link": null,
@@ -649,7 +649,7 @@
   "model": "portfolio.category",
   "pk": 1,
   "fields": {
-    "name": "Парсеры",
+    "name": "РџР°СЂСЃРµСЂС‹",
     "slug": "parsers"
   }
 },
@@ -657,7 +657,7 @@
   "model": "portfolio.category",
   "pk": 2,
   "fields": {
-    "name": "Боты",
+    "name": "Р‘РѕС‚С‹",
     "slug": "bots"
   }
 },
@@ -665,7 +665,7 @@
   "model": "portfolio.category",
   "pk": 3,
   "fields": {
-    "name": "Django-приложения",
+    "name": "Django-РїСЂРёР»РѕР¶РµРЅРёСЏ",
     "slug": "django_pril"
   }
 },
@@ -673,20 +673,20 @@
   "model": "portfolio.feedback",
   "pk": 1,
   "fields": {
-    "name": "Евгений",
+    "name": "Р•РІРіРµРЅРёР№",
     "email": "kamikadze47@gmail.com",
     "telephone": "89650831534",
-    "content": "Проверка связи!"
+    "content": "РџСЂРѕРІРµСЂРєР° СЃРІСЏР·Рё!"
   }
 },
 {
   "model": "portfolio.feedback",
   "pk": 2,
   "fields": {
-    "name": "Евгений Глушко",
+    "name": "Р•РІРіРµРЅРёР№ Р“Р»СѓС€РєРѕ",
     "email": "kamikadze47@gmail.com",
     "telephone": "89650831534",
-    "content": "Проверка сигнала!"
+    "content": "РџСЂРѕРІРµСЂРєР° СЃРёРіРЅР°Р»Р°!"
   }
 },
 {
