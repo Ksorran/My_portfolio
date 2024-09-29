@@ -10,6 +10,6 @@ def send_feedback_notification(sender, instance, created, **kwargs):
         send_mail(
             'Новое сообщение',
             f'Новое сообщение #{instance.id}, {instance.name}: {instance.content}.',
-            "eugeni.glushcko@yandex.ru",
+            "eu-gl-test@yandex.ru",
             ['kamikadze47@gmail.com']
         )
