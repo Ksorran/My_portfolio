@@ -11,7 +11,7 @@
   функционалом (например полностью реализован процесс авторизации, в том числе через соцсети).
 
 <details><summary><b>Скриншоты:</b></summary>
-![image](https://github.com/user-attachments/assets/46db04e5-4a8a-401b-978d-966f1b838f4e)
+[Main_page](https://github.com/user-attachments/assets/46db04e5-4a8a-401b-978d-966f1b838f4e)
 </details>
 
 ## Установка и запуск
