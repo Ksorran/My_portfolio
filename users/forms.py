@@ -48,7 +48,8 @@ class ProfileUserForm(forms.ModelForm):
                             widget=forms.TextInput(attrs={'class': 'form-input'}))
     this_year = datetime.date.today().year
     date_birth = forms.DateField(label='День рождения',
-                                 widget=forms.SelectDateWidget(attrs={'class': 'date-birth'}, years=tuple(range(this_year - 100, this_year - 5))))
+                                 widget=forms.SelectDateWidget(attrs={'class': 'date-birth'},
+                                                               years=tuple(range(this_year - 100, this_year - 5))))
 
     class Meta:
         model = get_user_model()

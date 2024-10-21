@@ -3,6 +3,8 @@ from django.urls import reverse
 
 
 class Projects(models.Model):
+    """База данных, содержащая информацию о моих Pet-проектах"""
+
     class Status(models.IntegerChoices):
         PLANNED = 0, 'В планах'
         AT_WORK = 1, 'В работе'
@@ -13,6 +15,9 @@ class Projects(models.Model):
     title_screen = models.ImageField(upload_to='screenshots/', default='def_im/default_pr.png',
                                      null=True, blank=True, verbose_name='Лицевой скриншот')
     description = models.TextField(blank=True, verbose_name="Описание проекта")
+    code_description = models.TextField(blank=True, verbose_name="Описание кода")
+    additional_information = models.TextField(blank=True, verbose_name="Дополнительная информация")
+    technology_stack = models.TextField(blank=True, verbose_name="Стек технологий")
     code_screen = models.ImageField(upload_to='screenshots/', default=None, null=True, blank=True,
                                     verbose_name='Скрин кода')
     interface_screen = models.ImageField(upload_to='screenshots/', default=None, null=True, blank=True,
@@ -35,6 +40,7 @@ class Projects(models.Model):
 
 
 class Category(models.Model):
+    """Категории, на которые подразделяются Pet-проекты"""
     name = models.CharField(max_length=255, db_index=True, verbose_name='Категория')
     slug = models.SlugField(max_length=255, unique=True, db_index=True)
 
@@ -50,6 +56,9 @@ class Category(models.Model):
 
 
 class Feedback(models.Model):
+    """Содержит все сообщения из обратной связи. Полагаю рассматриваемый функционал не соответствует логике данного
+    приложения и его следует перенести, но создавать исключительно под него отдельное приложение считаю избыточным,
+    поэтому изменения будут по мере расширения проекта"""
     name = models.CharField(max_length=255, verbose_name="Имя")
     email = models.EmailField(verbose_name='Email')
     telephone = models.CharField(max_length=255, verbose_name='Телефон')
@@ -58,4 +67,3 @@ class Feedback(models.Model):
     class Meta:
         verbose_name = 'Обратная связь'
         verbose_name_plural = 'Обратная связь'
-

@@ -8,11 +8,13 @@ from .models import Projects
 
 
 class IndexView(TemplateView):
+    """Главная страница сайта"""
     template_name = 'portfolio/index.html'
     extra_context = {'title': "Портфолио"}
 
 
 class ProjectsHome(ListView):
+    """Каталог проектов"""
     template_name = 'portfolio/projects.html'
     context_object_name = 'projects'
     extra_context = {'cat_selected': 0, 'title': 'Каталог'}
@@ -22,6 +24,7 @@ class ProjectsHome(ListView):
 
 
 class ProjectCategory(ListView):
+    """Каталог проектов с учетом категорий"""
     template_name = 'portfolio/projects.html'
     context_object_name = 'projects'
     allow_empty = False
@@ -38,6 +41,7 @@ class ProjectCategory(ListView):
 
 
 class ShowProject(DetailView):
+    """Страница конкретного проекта"""
     model = Projects
     template_name = 'portfolio/project.html'
     slug_url_kwarg = 'project_slug'
@@ -49,6 +53,7 @@ class ShowProject(DetailView):
 
 
 class ContactView(CreateView):
+    """Обратная связь"""
     form_class = FeedbackForm
     template_name = 'portfolio/contact.html'
     success_url = reverse_lazy('home')
