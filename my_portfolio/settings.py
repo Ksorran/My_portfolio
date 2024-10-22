@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'users.apps.UsersConfig',
     'social_django',
+    'taggit',
 ]
 
 MIDDLEWARE = [

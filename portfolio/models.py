@@ -1,6 +1,8 @@
 from django.db import models
 from django.urls import reverse
 
+from taggit.managers import TaggableManager
+
 
 class Projects(models.Model):
     """База данных, содержащая информацию о моих Pet-проектах"""
@@ -27,6 +29,7 @@ class Projects(models.Model):
     project_stage = models.IntegerField(choices=Status.choices, default=Status.PLANNED, verbose_name='Статус')
     cat = models.ForeignKey('Category', on_delete=models.PROTECT, verbose_name='Категория', null=True, blank=True,
                             related_name='projects')
+    tags = TaggableManager()
 
     def __str__(self):
         return self.title

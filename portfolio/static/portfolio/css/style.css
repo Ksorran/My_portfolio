@@ -382,6 +382,14 @@ body {
     padding-left: 20px;
 }
 
+.tag_link {
+    color: white;
+    text-decoration: none;
+}
+
+.tag_link:hover {
+    color: red;
+}
 
 .p_title_scr {
     max-width: 20%;
@@ -410,7 +418,7 @@ body {
     min-height: 77.2vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.7fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
     row-gap: 2rem;
     column-gap: 3rem;
     justify-content: center;
@@ -466,8 +474,13 @@ body {
     grid-column: 2/3;
     border-radius: 20px;
     text-align: center;
-    padding: 1em 0.5em;
+    padding: 1em 1em;
     box-shadow: 10px -5px 5px black;
+}
+
+.stack_list {
+    padding-left: 3em;
+    text-align: left;
 }
 
 .project_github_link {
@@ -480,6 +493,10 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 2em;
+}
+.project_github_link>p:hover {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2); ;
 }
 
 

@@ -18,7 +18,11 @@
 
         <div class="project_stack">
             <h3>Стек технологий:</h3>
-            {{ project.technology_stack|linebreaks }}
+            <ol class="stack_list">
+                {% for tag in project.tags.all %}
+                    <li><a class="tag_link" href="{% url 'tags' tag.slug%}">{{ tag }}</a></li>
+                {% endfor %}
+            </ol>
         </div>
         <div class="project_github_link">
             <img src="{% static 'portfolio/images/double_arrow_down.png' %}" alt="Стрелка вниз"

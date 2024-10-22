@@ -2,6 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, DetailView, FormView, CreateView
+from taggit.models import Tag
 
 from .forms import FeedbackForm
 from .models import Projects
@@ -38,6 +39,22 @@ class ProjectCategory(ListView):
 
     def get_queryset(self):
         return Projects.objects.filter(cat__slug=self.kwargs['cat_slug'])
+
+
+class ProjectTag(ListView):
+    """Каталог проектов с учетом Тегов"""
+    template_name = 'portfolio/projects.html'
+    context_object_name = 'projects'
+    allow_empty = False
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Каталог'
+        return context
+
+    def get_queryset(self):
+        tag = get_object_or_404(Tag, slug=self.kwargs['tag_slug'])
+        return Projects.objects.filter(tags__in=[tag])
 
 
 class ShowProject(DetailView):

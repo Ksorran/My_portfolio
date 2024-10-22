@@ -21,7 +21,15 @@
                 {% for p in projects %}
                     <li class="project">
                         <h2 class="pr-title">{{ p.title }}</h2>
-                        <p class="pr-cat">Категория: {{ p.cat.name }} | Теги: (пока в планах) | Дата последнего изменения:
+                            <p class="pr-cat">Категория: {{ p.cat.name }} | Теги:
+                                {% for tag in p.tags.all %}
+                                    {% if forloop.last %}
+                                        <a class="tag_link" href="{% url 'tags' tag.slug%}">{{ tag }}</a>
+                                    {% else %}
+                                        <a class="tag_link" href="{% url 'tags' tag.slug%}">{{ tag }},</a>
+                                    {% endif %}
+                                {% endfor %}
+                                | Дата последнего изменения:
                             {{ p.time_update }}</p>
                         <div class="project-body">
                             {% if p.title_screen %}
