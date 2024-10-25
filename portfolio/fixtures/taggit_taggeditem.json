@@ -1,0 +1,1 @@
+[{"model": "taggit.taggeditem", "pk": 1, "fields": {"tag": 1, "content_type": 9, "object_id": 9}}, {"model": "taggit.taggeditem", "pk": 2, "fields": {"tag": 2, "content_type": 9, "object_id": 9}}]

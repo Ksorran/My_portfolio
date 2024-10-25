@@ -1,0 +1,1 @@
+[{"model": "portfolio.category", "pk": 1, "fields": {"name": "Парсеры", "slug": "parsers"}}, {"model": "portfolio.category", "pk": 2, "fields": {"name": "Боты", "slug": "bots"}}, {"model": "portfolio.category", "pk": 3, "fields": {"name": "Django-приложения", "slug": "django_pril"}}, {"model": "portfolio.category", "pk": 4, "fields": {"name": "Иное", "slug": "other"}}]

@@ -1,0 +1,1 @@
+[{"model": "portfolio.feedback", "pk": 1, "fields": {"name": "Евгений", "email": "kamikadze47@gmail.com", "telephone": "89650831534", "content": "Проверка связи!"}}, {"model": "portfolio.feedback", "pk": 2, "fields": {"name": "Евгений Глушко", "email": "kamikadze47@gmail.com", "telephone": "89650831534", "content": "Проверка сигнала!"}}]

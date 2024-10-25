@@ -1,0 +1,1 @@
+[{"model": "taggit.tag", "pk": 1, "fields": {"name": "CSS", "slug": "css"}}, {"model": "taggit.tag", "pk": 2, "fields": {"name": "HTML", "slug": "html"}}]

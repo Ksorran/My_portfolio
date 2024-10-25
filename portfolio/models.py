@@ -20,9 +20,9 @@ class Projects(models.Model):
     code_description = models.TextField(blank=True, verbose_name="Описание кода")
     additional_information = models.TextField(blank=True, verbose_name="Дополнительная информация")
     technology_stack = models.TextField(blank=True, verbose_name="Стек технологий")
-    code_screen = models.ImageField(upload_to='screenshots/', default=None, null=True, blank=True,
+    code_screen = models.ImageField(upload_to='screenshots/', default='def_im/default_pr.png', null=True, blank=True,
                                     verbose_name='Скрин кода')
-    interface_screen = models.ImageField(upload_to='screenshots/', default=None, null=True, blank=True,
+    interface_screen = models.ImageField(upload_to='screenshots/', default='def_im/default_pr.png', null=True, blank=True,
                                          verbose_name='Скрин интерфейса')
     github_link = models.URLField(null=True, blank=True, verbose_name='Ссылка на гитхаб')
     time_update = models.DateTimeField(auto_now=True, verbose_name="Время изменения")
