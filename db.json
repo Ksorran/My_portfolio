@@ -91,6 +91,136 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-10-25T21:42:34.918Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Парсер магазинов электроники",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-10-25T21:44:39.306Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Парсер магазинов электроники",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043a\\u0440\\u0438\\u043d \\u0438\\u043d\\u0442\\u0435\\u0440\\u0444\\u0435\\u0439\\u0441\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-10-25T21:44:46.569Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Парсер магазинов электроники",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-10-25T21:45:45.593Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Парсер магазинов электроники",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043a\\u0440\\u0438\\u043d \\u043a\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-10-25T21:47:34.120Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Телеграмм бот с Chat-GPT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-10-25T21:47:57.520Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Конвертер валют",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043a\\u0440\\u0438\\u043d \\u043a\\u043e\\u0434\\u0430\", \"\\u0421\\u043a\\u0440\\u0438\\u043d \\u0438\\u043d\\u0442\\u0435\\u0440\\u0444\\u0435\\u0439\\u0441\\u0430\", \"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-10-25T21:48:06.525Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Телеграмм бот с Chat-GPT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043a\\u0440\\u0438\\u043d \\u043a\\u043e\\u0434\\u0430\", \"\\u0421\\u043a\\u0440\\u0438\\u043d \\u0438\\u043d\\u0442\\u0435\\u0440\\u0444\\u0435\\u0439\\u0441\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-10-25T21:48:10.361Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Телеграмм бот с Chat-GPT",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-10-25T21:48:33.669Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Бот для ответа на комментарии",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043a\\u0440\\u0438\\u043d \\u043a\\u043e\\u0434\\u0430\", \"\\u0421\\u043a\\u0440\\u0438\\u043d \\u0438\\u043d\\u0442\\u0435\\u0440\\u0444\\u0435\\u0439\\u0441\\u0430\", \"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-10-25T21:48:48.071Z",
+    "user": 5,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Todoo-List",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043a\\u0440\\u0438\\u043d \\u043a\\u043e\\u0434\\u0430\", \"\\u0421\\u043a\\u0440\\u0438\\u043d \\u0438\\u043d\\u0442\\u0435\\u0440\\u0444\\u0435\\u0439\\u0441\\u0430\", \"Tags\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -713,10 +843,10 @@
     "code_description": "",
     "additional_information": "",
     "technology_stack": "",
-    "code_screen": "",
-    "interface_screen": "",
+    "code_screen": "screenshots/default_pr_ppsmLcR.png",
+    "interface_screen": "screenshots/default_pr_1GMh8UI.png",
     "github_link": null,
-    "time_update": "2024-07-23T11:18:15.349Z",
+    "time_update": "2024-10-25T21:45:45.590Z",
     "project_stage": 0,
     "cat": 1
   }
@@ -732,10 +862,10 @@
     "code_description": "",
     "additional_information": "",
     "technology_stack": "",
-    "code_screen": "",
-    "interface_screen": "",
+    "code_screen": "screenshots/default_pr_D8nkl81.png",
+    "interface_screen": "screenshots/default_pr_QwDmDVP.png",
     "github_link": null,
-    "time_update": "2024-08-10T17:19:50.138Z",
+    "time_update": "2024-10-25T21:48:10.359Z",
     "project_stage": 0,
     "cat": 2
   }
@@ -751,10 +881,10 @@
     "code_description": "",
     "additional_information": "",
     "technology_stack": "",
-    "code_screen": "",
-    "interface_screen": "",
+    "code_screen": "screenshots/default_pr_XIPOqLe.png",
+    "interface_screen": "screenshots/default_pr_Cyql7a6.png",
     "github_link": null,
-    "time_update": "2024-08-10T17:19:58.915Z",
+    "time_update": "2024-10-25T21:47:57.512Z",
     "project_stage": 0,
     "cat": 3
   }
@@ -770,10 +900,10 @@
     "code_description": "",
     "additional_information": "",
     "technology_stack": "",
-    "code_screen": "",
-    "interface_screen": "",
+    "code_screen": "screenshots/default_pr_RlXBpio.png",
+    "interface_screen": "screenshots/default_pr_7ljv9IR.png",
     "github_link": null,
-    "time_update": "2024-08-10T17:20:06.608Z",
+    "time_update": "2024-10-25T21:48:33.665Z",
     "project_stage": 0,
     "cat": 2
   }
@@ -789,10 +919,10 @@
     "code_description": "",
     "additional_information": "",
     "technology_stack": "",
-    "code_screen": "",
-    "interface_screen": "",
+    "code_screen": "screenshots/default_pr_NbWhNFX.png",
+    "interface_screen": "screenshots/default_pr_JIvMNg8.png",
     "github_link": null,
-    "time_update": "2024-07-23T14:22:53.209Z",
+    "time_update": "2024-10-25T21:48:48.065Z",
     "project_stage": 0,
     "cat": 3
   }
@@ -927,6 +1057,30 @@
   }
 },
 {
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "Selenium",
+    "slug": "selenium"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "Django",
+    "slug": "django"
+  }
+},
+{
   "model": "taggit.taggeditem",
   "pk": 1,
   "fields": {
@@ -942,6 +1096,78 @@
     "tag": 2,
     "content_type": 9,
     "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 3,
+    "content_type": 9,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 4,
+    "content_type": 9,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 3,
+    "content_type": 9,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 5,
+    "content_type": 9,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 3,
+    "content_type": 9,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 3,
+    "content_type": 9,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 5,
+    "content_type": 9,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 3,
+    "content_type": 9,
+    "object_id": 8
   }
 }
 ]
