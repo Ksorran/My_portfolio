@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="resume_background">
+        <div class="resume_body">
+            <div class="resume_sidebar">
+                <div class="resume_photo">
+                    <img src="{% static 'portfolio/images/My_photo.png' %}" alt="Мое фото" class="resume_photo" width="50%">
+                </div>
+                <div class="resume_contacts">
+                    <h3 class="resume_sidebar_title">Контакты</h3>
+                    <ul class="resume_contacts_list">
+                        <li class="resume_contact">г. Санкт-Петербург</li>
+                        <li class="resume_contact">+7 (965) 083-15-34</li>
+                        <li class="resume_contact"><a href="ewgeniy_gl@mail.ru">ewgeniy_gl@mail.ru</a></li>
+                        <li class="resume_contact"><a href="https://github.com/Ksorran">Github</a></li>
+                    </ul>
+                </div>
+                <div class="resume_skills">
+                    <h3 class="resume_sidebar_title">Стек технологий</h3>
+                    <ul class="resume_skill_list">
+                        <li class="resume_skill">Python</li>
+                        <li class="resume_skill">Django</li>
+                        <li class="resume_skill">ООП</li>
+                        <li class="resume_skill">HTML5</li>
+                        <li class="resume_skill">CSS3</li>
+                        <li class="resume_skill">SQL</li>
+                        <li class="resume_skill">Git</li>
+                        <li class="resume_skill">Linux</li>
+                        <li class="resume_skill">API</li>
+                    </ul>
+
+                </div>
+                <div class="resume_about">
+                    <h3 class="resume_sidebar_title">О себе</h3>
+                </div>
+            </div>
+            <div class="resume_main">
+                <div class="resume_title">
+                    <h2 class="resume_name">Глушко Евгений</h2>
+                    <h4 class="resume_job_title">Beckend разработчик на Python(junior)</h4>
+                </div>
+                <div class="resume_blocks">
+                    <div class="resume_block">
+
+                    </div>
+                    <div class="resume_block">
+
+                    </div>
+                    <div class="resume_block">
+
+                    </div>
+                    <div class="resume_block">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

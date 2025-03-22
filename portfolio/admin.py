@@ -8,7 +8,7 @@ class ProjectsAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'title')
     ordering = ('id',)
     list_editable = ('project_stage', 'cat', )
-    list_per_page = 5
+    list_per_page = 10
 
 
 @admin.register(Category)

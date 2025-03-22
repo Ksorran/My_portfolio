@@ -14,6 +14,12 @@ class IndexView(TemplateView):
     extra_context = {'title': "Портфолио"}
 
 
+class ResumeView(TemplateView):
+    """Резюме"""
+    template_name = 'portfolio/resume.html'
+    extra_context = {'title': 'Резюме'}
+
+
 class ProjectsHome(ListView):
     """Каталог проектов"""
     template_name = 'portfolio/projects.html'

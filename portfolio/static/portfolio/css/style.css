@@ -199,6 +199,7 @@ body {
 
 .slogan-1 {
     font-size: 30px;
+    margin-bottom: 1em;
 }
 
 .slogan-1, .slogan-2 {
@@ -270,6 +271,66 @@ body {
     justify-content: space-between;
 }
 
+
+
+/* ______________________________________________Резюме____________________________________________________________ */
+
+.resume_background {
+    display: flex;
+}
+
+.resume_body {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+    height: 100vh;
+    margin: 2em;
+    background-color: #DCDCDC;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.resume_sidebar {
+    width: 25%;
+    height: 100vh;
+    background-color: #DCDCDC;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.resume_photo {
+    border-radius: 50%;
+}
+
+.resume_main {
+    width: 75%;
+    height: 96vh;
+    background-color: white;
+    margin-top: 4vh;
+    border-top-left-radius: 30%;
+    text-align: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 20% 80%;
+
+}
+
+.resume_title {
+    padding: 1.5em;
+}
+
+.resume_blocks {
+    display: flex;
+    flex-direction: row;
+}
+
+.resume_block {
+    background-color: #DCDCDC;
+}
 
 
 /* ______________________________________________Обратная связь____________________________________________________ */
