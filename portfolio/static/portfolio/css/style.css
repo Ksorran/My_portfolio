@@ -284,7 +284,7 @@ body {
     flex-direction: row;
     justify-content: left;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     margin: 2em;
     background-color: #DCDCDC;
     border-radius: 40px;
@@ -293,22 +293,51 @@ body {
 
 .resume_sidebar {
     width: 25%;
-    height: 100vh;
+    height: 150vh;
     background-color: #DCDCDC;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
+    padding: 1em 0.5em;
+    overflow: scroll;
+    scrollbar-width: none; /* Для Firefox */
+}
+
+.resume_sidebar::-webkit-scrollbar {
+  display: none; /* Скрывает полосу в Chrome, Safari, Edge */
 }
 
 .resume_photo {
     border-radius: 50%;
 }
 
+.resume_contacts_list {
+    list-style-type: none;
+}
+
+.resume_skill_list {
+    list-style-position: inside;
+    -moz-column-count: 2; /* Firefox */
+    -webkit-column-count: 2; /* Safari and Chrome */
+    column-count: 2;
+    height: 200px;
+    list-style-type: none;
+}
+
+.resume_skill {
+    padding: 0.5em 0;
+}
+
+.resume_about {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 .resume_main {
     width: 75%;
-    height: 96vh;
+    height: 146.5vh;
     background-color: white;
     margin-top: 4vh;
     border-top-left-radius: 30%;
@@ -326,10 +355,25 @@ body {
 .resume_blocks {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .resume_block {
     background-color: #DCDCDC;
+    width: 40%;
+    height: 40%;
+    border-radius: 40px;
+    box-shadow: 10px 5px 5px black;
+}
+
+.resume_projects {
+    width: 87%;
+    height: 50%;
+}
+
+.block_title {
+    padding-top: 1em;
 }
 
 
