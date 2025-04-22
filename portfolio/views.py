@@ -6,6 +6,7 @@ from taggit.models import Tag
 
 from .forms import FeedbackForm
 from .models import Projects
+from .utils import get_my_stack
 
 
 class IndexView(TemplateView):
@@ -14,10 +15,20 @@ class IndexView(TemplateView):
     extra_context = {'title': "Портфолио"}
 
 
-class ResumeView(TemplateView):
+class ResumeView(ListView):
     """Резюме"""
     template_name = 'portfolio/resume.html'
-    extra_context = {'title': 'Резюме'}
+    context_object_name = 'projects'
+
+    def get_queryset(self):
+        return Projects.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["skills"] = get_my_stack()
+        context["tags"] = [tag.slug for tag in Tag.objects.all()]
+        context['title'] = 'Резюме'
+        return context
 
 
 class ProjectsHome(ListView):

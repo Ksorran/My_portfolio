@@ -11,36 +11,42 @@
                 <div class="resume_contacts">
                     <h3 class="resume_sidebar_title">Контакты</h3>
                     <ul class="resume_contacts_list">
-                        <li class="resume_contact">г. Санкт-Петербург</li>
-                        <li class="resume_contact">+7 (965) 083-15-34</li>
-                        <li class="resume_contact"><a href="ewgeniy_gl@mail.ru">ewgeniy_gl@mail.ru</a></li>
-                        <li class="resume_contact"><a href="https://github.com/Ksorran">Github</a></li>
+                        <li class="resume_contact"><i class="fa-solid fa-location-dot"></i> г. Санкт-Петербург</li>
+                        <li class="resume_contact"><i class="fa-solid fa-phone"></i> +7 (965) 083-15-34</li>
+                        <li class="resume_contact"><a class="resume_link" href="https://t.me/Evgeniy_Glushko">
+                            <i class="fa-brands fa-telegram"></i> Telegram</a></li>
+                        <li class="resume_contact"><a class="resume_link" href="{% url 'contact' %}">
+                            <i class="fa-solid fa-envelope"></i> ewgeniy_gl@mail.ru</a></li>
+                        <li class="resume_contact"><a class="resume_link" href="https://github.com/Ksorran">
+                            <i class="fa-brands fa-github"></i> Github</a></li>
+                        <li class="resume_contact"><img src="{% static 'portfolio/images/Stepik_logo.png' %}" alt="stepik_logo">
+                            <a href="https://stepik.org/users/466961023" class="resume_link">Stepik</a></li>
                     </ul>
                 </div>
                 <div class="resume_skills">
                     <h3 class="resume_sidebar_title">Стек технологий</h3>
                     <ul class="resume_skill_list">
-                        <li class="resume_skill">Python</li>
-                        <li class="resume_skill">Django</li>
-                        <li class="resume_skill">ООП</li>
-                        <li class="resume_skill">HTML5</li>
-                        <li class="resume_skill">CSS3</li>
-                        <li class="resume_skill">SQL</li>
-                        <li class="resume_skill">Git</li>
-                        <li class="resume_skill">Linux</li>
-                        <li class="resume_skill">API</li>
+                        {% for skill in skills %}
+                            {% with lower_skill=skill|lower %}
+                                {% if lower_skill in tags %}
+                                    <li class="resume_skill"><a class="resume_link" href="{% url 'tags' lower_skill %}">
+                                        {{ skill }}</a></li>
+                                {% else %}
+                                    <li class="resume_skill">{{ skill }}</li>
+                                {% endif %}
+                            {% endwith %}
+                        {% endfor %}
                     </ul>
 
                 </div>
                 <div class="resume_about">
                     <h3 class="resume_sidebar_title">О себе</h3>
-                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
-                    стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник
-                    создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-                    Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в
-                    электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами
-                    Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus
-                    PageMaker.
+                    Несколько лет назад случайно открыл для себя Python и с тех пор увлечён программированием. Активно
+                    развиваюсь в веб-разработке, работаю с Django, HTML и CSS, а также углубляю знания в алгоритмах и
+                    структурах данных.
+                    Более 600 дней без перерыва обучаюсь на Stepik, где решил уже свыше 7000 задач. Постоянно
+                    совершенствую навыки, изучаю новые технологии и применяю их в практических проектах.
+                    Готов к сложным задачам, быстрому обучению и профессиональному росту.
                 </div>
             </div>
             <div class="resume_main">
@@ -52,20 +58,59 @@
                     <div class="resume_block">
                         <div class="block_title"><h3>Образование</h3></div>
                         <div class="resume_education"><b>Высшее (непрофильное) образование:</b>
-                            <p>2010-2015гг.
-                            <p>СПб ГУАП - <i>специалитет</i>
-                            <p>Направление: "Финансы и кредит"
-                            <p><b>Дополнительное профильное образование:</b>
-                            <p>Самообучение</p>
-                            <p>Основная платформа <a href="stepik.org">stepik</a></p>
+                            <br>2010-2015гг.
+                            <br>СПб ГУАП - <i>специалитет</i>
+                            <br>Направление: "Финансы и кредит"<p></p>
+
+                            <b>Дополнительное профильное образование (самообучение):</b>
+                            <br>Основная платформа <em><a class="resume_link" href="https://stepik.org/users/466961023">
+                                    stepik.org:</a></em>
+                            <ul class="stepik_info_list">
+                                <li><strong>- </strong>более 600 дней беспрерывного обучения;</li>
+                                <li><strong>- </strong>более 7000 решенных задач;</li>
+                                <li><strong>- </strong>более 35 сертификатов об окончании курсов</li>
+                                <li><strong>- </strong>вхожу в 1100 лучших студентов за все время</li>
+                            </ul>
 
                         </div>
                     </div>
-                    <div class="resume_block">
+                    <div class="resume_block block_experience">
                         <div class="block_title"><h3>Опыт работы</h3></div>
+                        <div class="resume_experience">
+                            <b>Управление ФНС России по Санкт-Петербургу</b>
+                            <br><b>2019 - по н.в.</b>
+                            <br>Отдел налогообложения физических лиц и администрирования страховых взносов
+                            <br><b>Должность:</b> Технолог отдела (главный государственный налоговый инспектор)
+                            <p><ol>
+                            <b>Достижения:</b>
+                                <li>Являлся ведущим специалистом по переносу НДФЛ в ЕНС в рамках С-Пб.
+                                    <br>Осуществлял координацию действий нижестоящих налоговых органов,
+                                    занимался разработкой алгоритмов и методик, а также организацией обучения;</li>
+                                <li>На регулярной основе принимаю участие в различных рабочих группах, нацеленных на
+                                    тестирование и доработку нового ПО, в т.ч. имею опыт доработки алгоритмов и
+                                    написания ОПЗ</li>
+                                </ol>
+                            </p>
+                        </div>
                     </div>
                     <div class="resume_block resume_projects">
                         <div class="block_title"><h3>Мои проекты</h3></div>
+                        <div class="resume_projects_list">
+                            <ul class="resume_list_projects">
+                                {% for p in projects %}
+                                    <li class="project">
+                                        <h4 class="pr_title">{{ p.title }}</h4>
+                                        <hr>
+                                        <div class="project_body">
+                                            {% autoescape off %}
+                                                {{p.description|linebreaks|truncatewords:40}}
+                                            {% endautoescape %}
+                                        </div>
+                                        <p class="pr-link"><a href="{{ p.get_absolute_url }}">Подробнее</a></p>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
