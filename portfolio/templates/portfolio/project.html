@@ -19,17 +19,19 @@
         <div class="project_stack">
             <h3>Стек технологий:</h3>
             <ol class="stack_list">
+                <hr>
                 {% for tag in project.tags.all %}
                     <li><a class="tag_link" href="{% url 'tags' tag.slug%}">{{ tag }}</a></li>
                 {% endfor %}
             </ol>
         </div>
-        <div class="project_github_link">
-            <img src="{% static 'portfolio/images/double_arrow_down.png' %}" alt="Стрелка вниз"
-                                       height="100px" width="100px">
-            <p><a href="{{ project.github_link }}" target="_blank">Репозиторий</a></p>
-
-        </div>
+        <a href="{{ project.github_link }}" class="project_github_link">
+            <div class="about_github_link_box">
+                <img src="{% static 'portfolio/images/github_b.png'%}"
+                     alt="Логотип github" width="40px">
+                <p>Исходники</p>
+            </div>
+        </a>
         <div class="project_info"><img src="{% static 'portfolio/images/info.png' %}" alt="Информация"
                                        height="40px" width="40px">
             {{ project.additional_information|linebreaks }}</div>

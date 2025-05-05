@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load markdownify %}
+{% block content %}
+    <div class="about_page">
+        <div class="about_head">
+            <h1>Мое цифровое портфолио</h1>
+        </div>
+        <div class="about_description">
+            <div class="about_description_text_box">
+                <b class="about_description_head">Перед Вами мое, собранное на
+                Python и Django, цифровое портфолио, которое состоит из следующих блоков:</b>
+                <ol class="about_description_list">
+                    <li class="about_description_element">Каталог pet-проектов с подробным описанием;</li>
+                    <li class="about_description_element">Мое резюме в интерактивном формате (с гиперссылками на другие
+                        проекты/разделы сайта, которые подтверждают скилы);</li>
+                    <li class="about_description_element">Непосредственно сам сайт, который является достаточно большим
+                        и комплексным web-приложением, с широким функционалом (например полностью реализован процесс
+                        авторизации, в том числе через соцсети).</li>
+                </ol>
+                <div class="about_info"><img src="{% static 'portfolio/images/info.png' %}" alt="Информация" height="40px" width="40px">
+                <i>{{ project.additional_information|linebreaks }}</i></div>
+            </div>
+        </div>
+        <div class="about_inside_box"><img src="{% static 'portfolio/images/inside.png' %}" alt=""
+                                           class="about_inside" width="100%"
+                                                  height="100%"></div>
+        <div class="about_inside_description">
+            <div class="about_inside_screenshots">
+                <div class="about_screenshot"><img src="{{ project.title_screen.url }}" width="100%"
+                                                  height="100%" alt=""></div>
+                <div class="about_screenshot"><img src="{{ project.interface_screen.url }}" width="100%"
+                                                  height="100%" alt=""></div>
+                <div class="about_screenshot"><img src="{{ project.code_screen.url }}" width="100%"
+                                                  height="100%" alt=""></div>
+            </div>
+            <div class="about_inside_description_text">{{ project.code_description|markdownify }}</div>
+        </div>
+
+        <div class="about_stack">
+            <h3>Стек технологий:</h3>
+            <ol class="stack_list">
+                <hr>
+                {% for tag in project.tags.all %}
+                    <li><a class="tag_link" href="{% url 'tags' tag.slug%}">{{ tag }}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+        <a href="{{ project.github_link }}" class="about_github_link">
+            <div class="about_github_link_box">
+                <img src="{% static 'portfolio/images/github_b.png'%}"
+                     alt="Логотип github" width="40px">
+                <p>Исходники</p>
+            </div>
+        </a>
+    </div>
+{% endblock %}

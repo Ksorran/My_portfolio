@@ -1,4 +1,3 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, DetailView, CreateView
@@ -77,10 +76,24 @@ class ProjectTag(ListView):
 class ShowProject(DetailView):
     """Страница конкретного проекта"""
     model = Projects
-    template_name = 'portfolio/project.html'
     slug_url_kwarg = 'project_slug'
     context_object_name = 'project'
-    extra_context = {'title': 'Проект'}
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        slug = self.kwargs['project_slug']
+        if slug == 'site-portfolio':
+            context['title'] = 'О сайте'
+        else:
+            context['title'] = 'Проект'
+        return context
+
+    def get_template_names(self):
+        slug = self.kwargs['project_slug']
+        if slug == 'site-portfolio':
+            return ['portfolio/about.html']
+        else:
+            return ['portfolio/project.html']
 
     def get_object(self, queryset=None):
         return get_object_or_404(Projects.objects, slug=self.kwargs[self.slug_url_kwarg])

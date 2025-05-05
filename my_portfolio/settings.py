@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'debug_toolbar',
+    'markdownify.apps.MarkdownifyConfig',
     'portfolio.apps.PortfolioConfig',
     'users.apps.UsersConfig',
     'social_django',
@@ -173,3 +174,18 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
 )
+
+MARKDOWNIFY = {
+    "default": {
+        "extensions": [
+            'markdown.extensions.extra',
+            'markdown.extensions.nl2br',
+            'markdown.extensions.sane_lists',
+            'markdown.extensions.toc',
+        ],
+        "extension_configs": {
+            "markdown.extensions.codehilite": {"css_class": "highlight"},
+        },
+        "safe_mode": False,
+    }
+}
