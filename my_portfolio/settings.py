@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'social_django',
     'taggit',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -188,4 +189,10 @@ MARKDOWNIFY = {
         },
         "safe_mode": False,
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
 }
