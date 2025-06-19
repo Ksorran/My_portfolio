@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Projects, Category
+from .models import Projects, Category, Feedback
 from taggit.serializers import TagListSerializerField
 from taggit.models import Tag
 
@@ -23,4 +23,12 @@ class CategorySerializer(serializers.ModelSerializer):
 class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tag
+        fields = '__all__'
+
+
+class FeedbackSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+
+    class Meta:
+        model = Feedback
         fields = '__all__'

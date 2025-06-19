@@ -9,7 +9,7 @@ def send_feedback_notification(sender, instance, created, **kwargs):
     if created:
         send_mail(
             'Новое сообщение',
-            f'Новое сообщение #{instance.id}, {instance.name}: {instance.content}.',
+            f'Новое сообщение #{instance.id}, {instance.user}: {instance.feedback}.',
             "eu-gl-test@yandex.ru",
             ['kamikadze47@gmail.com']
         )

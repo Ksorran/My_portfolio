@@ -20,6 +20,6 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'email', 'telephone', 'content')
-    list_display_links = ('id', 'name')
+    list_display = ('id', 'user', 'contacts', 'feedback')
+    list_display_links = ('id', 'user')
     ordering = ('id', )

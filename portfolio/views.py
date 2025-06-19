@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, DetailView, CreateView
@@ -99,9 +100,14 @@ class ShowProject(DetailView):
         return get_object_or_404(Projects.objects, slug=self.kwargs[self.slug_url_kwarg])
 
 
-class ContactView(CreateView):
+class ContactView(LoginRequiredMixin, CreateView):
     """Обратная связь"""
     form_class = FeedbackForm
     template_name = 'portfolio/contact.html'
     success_url = reverse_lazy('home')
     extra_context = {'title': 'Обратная связь'}
+
+    def form_valid(self, form):
+        w = form.save(commit=False)
+        w.user = self.request.user
+        return super().form_valid(form)

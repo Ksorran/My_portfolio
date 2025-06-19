@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth import get_user, get_user_model
 
 from taggit.managers import TaggableManager
 
@@ -62,10 +63,9 @@ class Feedback(models.Model):
     """Содержит все сообщения из обратной связи. Полагаю рассматриваемый функционал не соответствует логике данного
     приложения и его следует перенести, но создавать исключительно под него отдельное приложение считаю избыточным,
     поэтому изменения будут по мере расширения проекта"""
-    name = models.CharField(max_length=255, verbose_name="Имя")
-    email = models.EmailField(verbose_name='Email')
-    telephone = models.CharField(max_length=255, verbose_name='Телефон')
-    content = models.TextField(verbose_name="Сообщение")
+    user = models.ForeignKey(get_user_model(), verbose_name="автор", on_delete=models.SET_NULL, null=True)
+    contacts = models.CharField(verbose_name='Удобный для Вас способ связи', max_length=255, blank=True)
+    feedback = models.TextField(verbose_name="Сообщение")
 
     class Meta:
         verbose_name = 'Обратная связь'

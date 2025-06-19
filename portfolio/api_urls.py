@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include, re_path
 from . import api_views
 
 
@@ -9,4 +9,8 @@ urlpatterns = [
     path('v1/projects/tags/', api_views.TagAPIList.as_view()),
     path('v1/projects/tags/<slug:tag_slug>/', api_views.ProjectsWithTagsAPIList.as_view()),
     path('v1/projects/<slug:project_slug>/', api_views.ProjectsAPIRetrieve.as_view()),
+    path('v1/drf-auth/', include('rest_framework.urls')),
+    path('v1/auth/', include('djoser.urls')),
+    path('v1/resume/', api_views.ResumeAPI.as_view()),
+    path('v1/feedback/', api_views.FeedbackAPI.as_view()),
 ]
