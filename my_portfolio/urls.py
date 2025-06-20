@@ -8,7 +8,7 @@ urlpatterns = [
     path('users/', include('users.urls', namespace="users")),
     path("__debug__/", include("debug_toolbar.urls")),
     path('social-auth/', include('social_django.urls', namespace='social')),
-    path('api/', include('portfolio.api_urls')),
+    path('api/', include('portfolio_api.urls')),
     path('', include('portfolio.urls')),
     re_path(r'^auth/', include('djoser.urls.authtoken')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -8,7 +8,7 @@ from taggit.models import Tag
 from django.conf import settings
 from rest_framework import status
 
-from .models import Projects, Category, Feedback
+from portfolio.models import Projects, Category, Feedback
 from .serializers import ProjectsSerializer, CategorySerializer, TagSerializer, FeedbackSerializer
 
 

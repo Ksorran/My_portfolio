@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'markdownify.apps.MarkdownifyConfig',
     'portfolio.apps.PortfolioConfig',
     'users.apps.UsersConfig',
+    'portfolio_api.apps.PortfolioApiConfig',
     'social_django',
     'taggit',
     'rest_framework',
@@ -194,6 +195,10 @@ MARKDOWNIFY = {
 }
 
 REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',  # Только JSON
+        # 'rest_framework.renderers.BrowsableAPIRenderer',  # Убрать Browsable API
+    ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],

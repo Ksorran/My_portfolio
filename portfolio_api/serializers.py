@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Projects, Category, Feedback
+from portfolio.models import Projects, Category, Feedback
 from taggit.serializers import TagListSerializerField
 from taggit.models import Tag
 
